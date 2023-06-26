@@ -34,7 +34,7 @@ Ans.An expression is a combination of values, variables, and operators that can 
 6. After running the following code, what does the variable bacon contain?
    .bacon = 22
    .bacon + 1
-Ans.After running the given code, the variable "bacon" will contain the value 22. The expression "bacon + 1" adds 1 to the current value of     "bacon" but doesn't modify the variable itself. If want to update the value of "bacon", need to assign the result of the expression back      to the variable, like this: "bacon = bacon + 1".
+Ans.After running the given code, the variable "bacon" will contain the value 22. The expression "bacon + 1" adds 1 to the current value of     "bacon" but doesn't modify the variable itself. If want to update the value of "bacon", need to assign the result of the expression back to the variable, like this: "bacon = bacon + 1".
 
 
 7. What should the values of the following two terms be?

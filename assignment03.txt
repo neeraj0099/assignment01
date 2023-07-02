@@ -1,0 +1,62 @@
+1. Why are functions advantageous to have in your programs?
+
+Ans.Functions are advantageous to have in programs because they promote code reuse, modularity, and organization. They allow to break down complex tasks into smaller, more manageable pieces of code, making program easier to understand, debug, and maintain. Functions also enable you to abstract away implementation details and encapsulate functionality, which improves code readability and reduces duplication.
+
+2. When does the code in a function run: when its specified or when its called?
+
+Ans.The code in a function runs when it is called, not when it is specified. When define a function, essentially creating a reusable block of code. The function is executed only when invoke or call it in program.
+
+3. What statement creates a function?
+
+Ans.The def statement is used to create a function. It is followed by the function name, a pair of parentheses for optional parameters, and a colon to indicate the start of the function block.
+
+4. What is the difference between a function and a function call?
+
+Ans.A function is a named block of code that performs a specific task and can be reused throughout the program. It is defined using the def statement.
+On the other hand, a function call is the act of invoking a function to execute its code. When a function is called, the program jumps to the function definition, executes the code inside it, and then returns to where the function was called.
+
+5. How many global scopes are there in a Python program? How many local scopes?
+
+Ans.There is one global scope, which is the outermost scope accessible from anywhere in the program. It contains global variables and functions.
+Local scopes, on the other hand, are created whenever a function is called. Each function call creates a new local scope, which is independent and separate from other scopes. Local scopes contain local variables that are only accessible within the function.
+
+6. What happens to variables in a local scope when the function call returns?
+
+Ans.When a function call returns, the local scope and its variables are destroyed. Any variables defined within the local scope are no longer accessible or existent once the function finishes executing. The program resumes execution from where the function was called, and any variables in the local scope become out of scope and cease to exist.
+
+7. What is the concept of a return value? Is it possible to have a return value in an expression?
+
+Ans.The concept of a return value is the value that a function can optionally send back to the caller. It allows a function to produce a result or output that can be used by the rest of the program. A return value is specified using the return statement followed by the value or expression to be returned. Yes, it is possible to have a return value in an expression.
+
+8. If a function does not have a return statement, what is the return value of a call to that function?
+
+Ans.If a function does not have a return statement, the return value of a call to that function is None.
+
+9. How do you make a function variable refer to the global variable?
+
+Ans.To make a function variable refer to the global variable with the same name, use the 'global' keyword inside the function.(globle A, A = 20).
+
+10. What is the data type of None?
+
+Ans.The data type of None is NoneType. NoneType is a built-in data type that represents the absence of a value or a null value.
+
+11. What does the sentence import areallyourpetsnamederic do?
+
+Ans.The sentence import areallyourpetsnamederic is not a valid Python import libraries.
+In Python, import statements are used to bring in external modules or libraries to use their functions, classes, or variables in program.
+
+12. If you had a bacon() feature in a spam module, what would you call it after importing spam?
+
+Ans. import spam
+     spam.bacon()  # Calling the bacon() function from the spam module.
+
+
+13. What can you do to save a programme from crashing if it encounters an error?
+
+Ans.Use error handling techniques. One common approach is to use try and except blocks. The try block contains the code that might raise an error, and the except block handles the error gracefully, allowing the program to continue execution.By catching and handling errors,prevent the program from crashing.
+
+14. What is the purpose of the try clause? What is the purpose of the except clause?
+Ans.The purpose of the try clause is to enclose the code that might raise an exception. It allows to catch and handle specific types of exceptions that occur within the try block. If an exception occurs, the program jumps to the corresponding except block, which contains the error handling code. The except clause specifies the type of exception to catch and provides the code to handle the exception.
+
+
+        Thank you*****

@@ -1,0 +1,156 @@
+1. What is a lambda function in Python, and how does it differ from a regular function?
+
+Ans.
+In Python, a lambda function is an anonymous function that can be defined without a name. It is created using the lambda keyword, followed by a list of parameters, a colon, and an expression to be evaluated.
+Lambda functions differ from regular functions in that they are single-expression functions without a function name. They cannot contain multiple statements or complex logic. Lambda functions are often used as function objects, assigned to variables, or passed as arguments in function calls. They provide a convenient way to define and use small, inline functions without the need for a full function definition.
+
+2. Can a lambda function in Python have multiple arguments? If yes, how can you define and use them?
+
+Ans.
+Yes, a lambda function in Python can have multiple arguments. You can define and use multiple arguments in a lambda function by specifying them in the parameter list separated by commas, followed by a colon, and then the expression to be evaluated.
+Example:-multiply = lambda x, y: x * y
+
+3. How are lambda functions typically used in Python? Provide an example use case.
+
+Ans.
+Lambda functions in Python are typically used in situations where a small, one-time function is needed, and defining a regular function explicitly would be unnecessary. They are commonly employed in functional programming situations where functions are passed as arguments to other functions.
+Example:-
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+
+
+4. What are the advantages and limitations of lambda functions compared to regular functions in Python?
+
+Ans.
+Advantages:
+Concise: Lambda functions allow for writing compact and inline functions without the need for a full function definition.
+Readability: They can improve code readability when used appropriately for simple operations.
+Function Objects: Lambda functions can be assigned to variables or passed as arguments, making them versatile in functional programming.
+
+Limitations:
+Single Expression: Lambda functions are limited to a single expression, which can restrict their use for more complex logic.
+No Statements: They cannot contain statements or multiple lines of code, limiting their functionality compared to regular functions.
+Lack of Naming: The lack of named lambda functions may reduce code clarity in cases where complex or reusable logic is involved.
+
+
+5. Are lambda functions in Python able to access variables defined outside of their own scope? Explain with an example.
+
+Ans.
+Yes, lambda functions in Python are able to access variables defined outside of their own scope. They can access and use variables from the surrounding scope, including global variables and variables from enclosing functions. This ability is known as lexical scoping or closure.
+Example:-
+def multiply_by(n):
+    return lambda x: x * n
+double = multiply_by(2)
+triple = multiply_by(3)
+print(double(5))   # Output: 10
+print(triple(5))   # Output: 15
+
+
+6. Write a lambda function to calculate the square of a given number.
+
+Ans.
+square = lambda x: x ** 2
+result = square(5)
+print(result)  # Output: 25
+
+7. Create a lambda function to find the maximum value in a list of integers.
+
+Ans.
+max_value = lambda lst: max(lst)
+numbers = [5, 2, 8, 1, 9, 4]
+result = max_value(numbers)
+print(result)  # Output: 9
+
+8. Implement a lambda function to filter out all the even numbers from a list of integers.
+
+Ans.
+even_numbers = lambda lst: list(filter(lambda x: x % 2 == 0, lst))
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = even_numbers(numbers)
+print(result)  # Output: [2, 4, 6, 8, 10]
+
+9. Write a lambda function to sort a list of strings in ascending order based on the length of each string.
+
+Ans.
+sort_strings_by_length = lambda lst: sorted(lst, key=lambda x: len(x))
+strings = ['apple', 'banana', 'cherry', 'date', 'eberry']
+result = sort_strings_by_length(strings)
+print(result)  # Output: ['date', 'apple', 'cherry', 'banana', 'eberry']
+
+10. Create a lambda function that takes two lists as input and returns a new list containing the common elements between the two lists.
+
+Ans.
+find_common_elements = lambda list1, list2: list(filter(lambda x: x in list2, list1))
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+result = find_common_elements(list1, list2)
+print(result)  # Output: [4, 5]
+
+11. Write a recursive function to calculate the factorial of a given positive integer.
+
+Ans.
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+result = factorial(5)
+print(result)  # Output: 120
+
+12. Implement a recursive function to compute the nth Fibonacci number.
+
+Ans.
+def fibonacci_recursive(n):
+    if n <= 0:
+        return None
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+result = fibonacci_recursive(7)
+print(result)  # Output: 8
+
+13. Create a recursive function to find the sum of all the elements in a given list.
+
+Ans.
+def recursive_sum(lst):
+    if len(lst) == 0:
+        return 0
+    else:
+        return lst[0] + recursive_sum(lst[1:])
+numbers = [1, 2, 3, 4, 5]
+result = recursive_sum(numbers)
+print(result)  # Output: 15
+
+14. Write a recursive function to determine whether a given string is a palindrome.
+
+Ans.
+def is_palindrome_recursive(string):
+    if len(string) <= 1:
+        return True
+    elif string[0] != string[-1]:
+        return False
+    else:
+        return is_palindrome_recursive(string[1:-1])
+print(is_palindrome_recursive("racecar"))   # Output: True
+print(is_palindrome_recursive("hello"))     # Output: False
+print(is_palindrome_recursive("madam"))     # Output: True
+print(is_palindrome_recursive("python"))    # Output: False
+
+15. Implement a recursive function to find the greatest common divisor (GCD) of two positive integers.
+
+Ans.
+def gcd_recursive(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd_recursive(b, a % b)
+result = gcd_recursive(48, 36)
+print(result)  # Output: 12
+
+
+      Thank you ***
+        

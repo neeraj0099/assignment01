@@ -1,0 +1,175 @@
+1. What is the role of try and exception block?
+
+Ans.
+In Python, the try and except blocks are used to handle exceptions and implement error handling in a structured manner. The try block is used to enclose the code that may potentially raise an exception. The except block is used to define the actions to be taken when a specific exception occurs.
+Example:-
+try:
+    # Code that may raise an exception
+    result = 10 / 0  # Division by zero
+except ZeroDivisionError:
+    # Exception handling code
+    print("Error: Division by zero is not allowed.")
+    
+2. What is the syntax for a basic try-except block?
+
+Ans.
+The basic syntax for a try-except block in Python is:
+try:
+    # Code that may raise an exception
+    # ...
+except ExceptionType:
+    # Exception handling code
+    # ...
+
+
+3. What happens if an exception occurs inside a try block and there is no matching
+except block?
+
+Ans.
+If an exception occurs inside a try block and there is no matching except block to handle that specific exception type, the exception will propagate upwards through the call stack until a suitable except block is found or, if none is found, the program will terminate, and an unhandled exception error message will be displayed.
+
+
+4. What is the difference between using a bare except block and specifying a specific
+exception type?
+
+Ans.
+Specific Exception Type:
+When you specify a specific exception type in an except block, such as except ValueError, it means that block will only handle exceptions of that particular type.
+Bare Except Block:
+Using a bare except block, without specifying any exception type, catches all types of exceptions. It is a more general catch-all approach that can handle any exception raised within the try block.
+
+5. Can you have nested try-except blocks in Python? If yes, then give an example.
+
+Ans.
+Yes,This allows for handling exceptions at different levels of code execution and providing specific exception handling for each nested block.
+Example:-
+try:
+    # Outer try block
+    print("Outer try block")
+    
+    try:
+        # Inner try block
+        print("Inner try block")
+        result = 10 / 0  # Raises ZeroDivisionError
+    except ZeroDivisionError:
+        # Inner except block
+        print("Inner except block: Division by zero")
+    
+    print("After inner try-except block")
+    
+except:
+    # Outer except block
+    print("Outer except block: Exception occurred")
+
+print("After outer try-except block")
+
+
+6. Can we use multiple exception blocks, if yes then give an example.
+
+Ans.
+Yes, it is possible to use multiple except blocks to handle different types of exceptions.
+try:
+    # Code that may raise an exception
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+    
+except ValueError:
+    # Exception handling for ValueError
+    print("Invalid input. Please enter a valid number.")
+    
+except ZeroDivisionError:
+    # Exception handling for ZeroDivisionError
+    print("Error: Division by zero is not allowed.")
+    
+except Exception as e:
+    # Exception handling for any other type of exception
+    print("An error occurred:", str(e))
+
+
+7. Write the reason due to which following errors are raised:
+a. EOFError
+b. FloatingPointError
+c. IndexError
+d. MemoryError
+e. OverflowError
+f. TabError
+g. ValueError
+
+Ans.
+a. EOFError: This error is raised when the end of a file (EOF) is encountered unexpectedly, typically while reading user input from the console or attempting to read from a file beyond its end.
+
+b. FloatingPointError: This error occurs when a floating-point operation fails, such as division by zero or an invalid mathematical operation like square root of a negative number.
+
+c. IndexError: This error is raised when trying to access an index of a sequence (list, tuple, string, etc.) that is out of range, i.e., when the index is either negative or exceeds the length of the sequence.
+
+d. MemoryError: This error is raised when an operation fails due to insufficient memory allocation. It occurs when a program requests more memory than the system can provide.
+
+e. OverflowError: This error is raised when a calculation exceeds the maximum representable value for a numeric data type, resulting in an overflow. It typically occurs with large integers or floating-point numbers.
+
+f. TabError: This error is raised when there is an issue with indentation, specifically inconsistent use of tabs and spaces in the code. It is typically encountered when trying to execute code that violates the Python's indentation rules.
+
+g. ValueError: This error occurs when a function receives an argument of the correct data type but an inappropriate value. It is raised when the input value does not conform to the expected range or format for the given operation or function.
+
+
+8. Write code for the following given scenario and add try-exception block to it.
+a. Program to divide two numbers
+b. Program to convert a string to an integer
+c. Program to access an element in a list
+d. Program to handle a specific exception
+e. Program to handle any exception
+
+Ans.
+
+a. Program to divide two numbers
+try:
+    numerator = int(input("Enter the numerator: "))
+    denominator = int(input("Enter the denominator: "))
+    result = numerator / denominator
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+b. Program to convert a string to an integer
+try:
+    string_num = input("Enter a number: ")
+    num = int(string_num)
+    print("Number:", num)
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+c. Program to access an element in a list
+try:
+    my_list = [1, 2, 3]
+    index = int(input("Enter an index: "))
+    element = my_list[index]
+    print("Element:", element)
+except IndexError:
+    print("Error: Index out of range.")
+
+d. Program to handle a specific exception
+try:
+    # Code that may raise a specific exception
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+e. Program to handle any exception
+try:
+    # Code that may raise any exception
+    x = int(input("Enter a number: "))
+    result = 10 / x
+    print("Result:", result)
+except Exception as e:
+    print("An error occurred:", str(e))
+    
+    
+        Thank you****
+
+
+
+
+
+
